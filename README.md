@@ -40,7 +40,10 @@ data "aws_ami" "cloud_raju" {
 
 
 module "my_ec2_instance" {
-  source             = "github.com/horrondor/Terraform-aws-ec2"
+
+  source  = "horrondor/ec2/aws"
+  version = "1.0.3"
+
   ec2_instance_type  = var.ec2_instance_type
   ec2_instance_name  = var.ec2_instance_name
   ec2_no_of_instance = var.ec2_no_of_instance
